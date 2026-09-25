@@ -114,6 +114,7 @@ return charge(order)
 - One word never means both a thing and its id (`Invoice` + `invoice_id`, not `invoice` for both).
 - No invented ids that collide with real ones.
 - `*_json` means a JSON string, not a parsed structure.
+- Vendor or wire jargon doesn't leak into our names. Name the class by the concept (`YesNoQuestion`) and keep the vendor's literal on the wire with a guard comment (`type: Literal["noul"]  # the API's name for a yes/no question`).
 - Don't rename persisted or contract keys for taste.
 
 ## Comments
